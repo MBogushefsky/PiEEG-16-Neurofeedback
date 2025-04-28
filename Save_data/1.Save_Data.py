@@ -12,6 +12,7 @@ import time
 import gpiod
 #from time import sleep
 import pandas as pd
+from scipy import signal
 
 button_pin_1 =  26 #13
 button_pin_2 =  13
@@ -338,7 +339,7 @@ while 1:
                     'data_14ch_test': data_14ch_test,
                     'data_15ch_test': data_15ch_test,
                     'data_16ch_test': data_16ch_test
-                            }
+                }
 
                 df = pd.DataFrame(data_dict)
                 df.to_excel("output3.xlsx", index=False)
